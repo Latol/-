@@ -27,6 +27,11 @@ Claude Code（主にクラウドセッション）で読み込むプロジェク
 - `description` はトリガー判定に使われるため、何をするスキルか・いつ使うかを具体的に書く。
 - API キーやトークンはリポジトリに書かない。クラウド環境の環境変数（シークレット）で渡す。
 
+## プラグイン
+
+claude.ai から同期されるプラグインのうち、不要なものは `.claude/settings.json` の `enabledPlugins` で `"<name>@synced": false` にして無効化している。
+ID は `claude plugin list` で確認する（例: vibe-prospecting の ID は `vpai@synced`）。
+
 ## 作業ルール
 
 - 指定された作業ブランチで作業し、`main` などへ直接 push しない。
